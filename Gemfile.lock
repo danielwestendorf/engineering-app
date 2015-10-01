@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    RedCloth (4.2.9)
     actionpack (4.2.4)
       actionview (= 4.2.4)
       activesupport (= 4.2.4)
@@ -140,7 +139,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  RedCloth
   dalli
   dotenv-rails
   haml

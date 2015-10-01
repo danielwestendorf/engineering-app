@@ -9,7 +9,6 @@ gem "mail"
 gem "puma"
 gem "rack-attack"
 gem "dalli"
-gem "RedCloth"
 
 group :development do
   gem "minitest"
