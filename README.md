@@ -14,7 +14,9 @@ $ bundle install
 $ puma
 ```
 
-ENV variables:
+### ENV variables:
+Make sure you set these variables in ```.env``` file.
+
 `EMAIL_TO` => Who is receiving the emails?
 
 `EMAIL_FROM` => Who should the FROM address be for notifications set to the applicant?
