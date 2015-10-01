@@ -85,6 +85,21 @@ input[type="submit"]:hover {
   background-image: linear-gradient(#54c2f9, #44b3ea);
 }
 
+.alert {
+  color: red;
+  text-decoration: underline;
+}
+
+.frustrated {
+  margin-top: 40px;
+  color: lightgrey;
+  font-size: 14px;
+}
+
+.frustrated a {
+  color: lightgrey;
+}
+
 .g-recaptcha {
   height: 80px;
 }

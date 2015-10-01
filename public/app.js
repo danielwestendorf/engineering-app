@@ -21,5 +21,8 @@ FormStorage = {
 };
 
 !function() {
-  FormStorage.bind(document.querySelector('form'));
+  var form = document.querySelector('form');
+
+  if (form != undefined)
+    FormStorage.bind(form);
 }(FormStorage);
