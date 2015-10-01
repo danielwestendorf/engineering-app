@@ -1,5 +1,6 @@
 require "json"
 require "net/http"
+require "redCloth"
 
 class SubmissionWorker
   include Sidekiq::Worker
@@ -47,6 +48,6 @@ class SubmissionWorker
   end
 
   def app_body(params)
-    "Name: #{params["name"]}<br>Email: #{params["email"]}<br>Github Profile URL: #{params["github_profile_url"]}<br>Why work with us? #{params["cover_letter"]}"
+    "Name: #{params["name"]}<br>Email: #{params["email"]}<br>Github Profile URL: #{params["github_profile_url"]}<br>Why work with us? #{RedCloth.new(params["cover_letter"]).to_html}"
   end
 end
