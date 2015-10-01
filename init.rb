@@ -3,6 +3,7 @@ require "sidekiq"
 require "mail"
 require 'dotenv'
 require "tilt/haml"
+require "action_view"
 
 case ENV["RACK_ENV"]
 when "development"

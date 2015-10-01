@@ -1,9 +1,9 @@
 require "json"
 require "net/http"
-require "redCloth"
 
 class SubmissionWorker
   include Sidekiq::Worker
+  include ActionView::Helpers::TextHelper
 
   def perform(params, remote_ip)
     if pass_recaptcha?(params["g-recaptcha-response"], remote_ip) == false
@@ -48,6 +48,6 @@ class SubmissionWorker
   end
 
   def app_body(params)
-    "Name: #{params["name"]}<br>Email: #{params["email"]}<br>Github Profile URL: #{params["github_profile_url"]}<br>Why work with us? #{RedCloth.new(params["cover_letter"]).to_html}"
+    "Name: #{params["name"]}<br>Email: #{params["email"]}<br>Github Profile URL: #{params["github_profile_url"]}<br>Why work with us? #{simple_format(params["cover_letter"])}"
   end
 end
