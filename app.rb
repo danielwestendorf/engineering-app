@@ -20,7 +20,7 @@ class EngineeringApp < Sinatra::Base
     fmt :email, EMAIL_REGEX
     fmt :github_profile_url, /https?:\/\/(www\.)?github\.com\/.+/
 
-    puts "Success! #{name}, #{email}, #{github_profile_url}, #{cover_letter}"
+    puts "Success! #{params[:name]}, #{params[:email]}, #{params[:github_profile_url]}, #{params[:cover_letter]}"
 
     SubmissionWorker.perform_async(params, request.ip)
 
