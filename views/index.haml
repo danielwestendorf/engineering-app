@@ -1,26 +1,28 @@
-%h1 Engineering Application
-%p Please fill out the fields below to apply for our open engineering positions! But beware, something on this page might be <strong>broken</strong>. Perhaps you can fix it? Check out the <a href="https://github.com/danielwestendorf/engineering-app" target="_blank">full source code</a> to see what's going on.
-
-%script{src: "https://www.google.com/recaptcha/api.js"}
+%header
+  %img{src: "/logo.png", width: "300px"}
+  %h1.centered Engineering Application
+  %p.centered Please fill out the fields below to apply for our open engineering positions! But beware, something on this page might be <strong>broken</strong>. Perhaps you can fix it? Check out the <a href="https://github.com/danielwestendorf/engineering-app" target="_blank">full source code</a> to see what's going on.
 
 %form{name: "application", method: "GET", action: "/apply", target: "_blank"}
-  %p
-    %label{for: "name"} Name
-    %br
-    %input#name{type: "text", name: "name", required: true}
-  %p
-    %label{for: "email"} Email
-    %br
-    %input#email{type: "email", required: true}
-  %p
-    %label{for: "github-profile-url"} GitHub Profile URL:
-    %br
-    %input#github-profile-url{type: "text", name: "github_profile_url", required: true, pattern: "https?://(www\.)?github\.com/.+"}
-  %p
-    %label{for: "cover-letter"} Why do you want to work with us?
-    %br
-    %textarea#cover-letter{name: "cover_letter", rows: 15, required: true}
-  %p
+  .centered.window
+    %p
+      %label{for: "name"} Name
+      %br
+      %input#name{type: "text", name: "name", required: true}
+    %p
+      %label{for: "email"} Email
+      %br
+      %input#email{type: "email", required: true}
+    %p
+      %label{for: "github-profile-url"} GitHub Profile URL:
+      %br
+      %input#github-profile-url{type: "text", name: "github_profile_url", required: true, pattern: "https?://(www\.)?github\.com/.+"}
+    %p
+      %label{for: "cover-letter"} Explain why will you be a good fit for Bright Funds:
+      %br
+      %textarea#cover-letter{name: "cover_letter", rows: 5, required: true}
     .g-recaptcha{"data-sitekey" => "6Lf6pg0TAAAAALsv0eypI-GEeEwgL1M1SOBAPSYv"}
   %p
-    %input{type: "submit", value: "Submit"}
+    %input{type: "submit", value: "Apply Now"}
+
+%script{src: "https://www.google.com/recaptcha/api.js"}

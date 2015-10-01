@@ -1,20 +1,131 @@
 body, html {
   width: 100%;
   height: 100%;
-  background: lightgreen;
-  font-family: Helvetica, Arial, sans-serif;
+  background-color: #f8f8f8;
+  font-family: "proxima-nova", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.content {
-  margin: 20px;
-  background: white;
-  border: 1px solid lightgrey;
-  padding: 10px;
+header {
+  width: 100%;
+  background-color: #02aedc;
+  color: white;
+  padding: 40px 0;
+}
+
+a {
+  color: white;
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: 600px;
+}
+
+.centered {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+header p {
+  padding: 20px 0;
+  line-height: 1.4em;
+}
+
+.window {
+  text-align: left;
+  background-color: white;
+  box-shadow: 0 0 9px rgba(0,0,0,0.03),0.5px 1px 1px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-top: -30px;
+}
+
+.window p {
+  margin-top: 20px;
+}
+
+.window p:first-child {
+  margin-top: 0;
+}
+
+label {
+  color: #2f2d2d;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 input[type="text"], input[type="email"], textarea {
+  margin-top: 10px;
   width: calc(100% - 10px);
-  border: 1px solid darkgreen;
-  padding: 3px 5px;
+  padding: 8px 5px;
+  font-size: 14px;
   outline: none;
+  border: 1px solid #e6e6e6;
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 20px auto;
+  background-color: #3498db;
+  background-image: linear-gradient(#47b9f1, #43ace0);
+  border: 1px solid #007a9a;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.4);
+  color: #ffffff;
+  padding: 9px 60px 10px;
+  line-height: 22px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-image: linear-gradient(#54c2f9, #44b3ea);
+}
+
+.g-recaptcha {
+  height: 80px;
+}
+
+.apply {
+  background-color: #02aedc;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding-top: 40px;
+}
+
+.apply h1 {
+  margin-top: 20px;
+}
+
+.apply p {
+  font-size: 18px;
+}
+
+.apply ul {
+  list-style: none;
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0;
+}
+
+.apply ul li {
+  display: inline-block;
+  width: 140px;
+  padding: 20px;
+}
+
+.apply ul li img {
+  width: 100%;
+}
+
+@media (max-width: 799px) {
+  .window {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
