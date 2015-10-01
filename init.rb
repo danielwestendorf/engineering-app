@@ -1,6 +1,7 @@
 require "sinatra/base"
 require "sidekiq"
 require "mail"
+require 'dotenv'
 require "tilt/haml"
 
 case ENV["RACK_ENV"]
@@ -8,6 +9,9 @@ when "development"
   Mail.defaults do
     delivery_method :sendmail
   end
+
+  # Setup dotenv
+  Dotenv.load
 
   Sidekiq.configure_server do |config|
     config.redis = { url: "redis://127.0.0.1" }
