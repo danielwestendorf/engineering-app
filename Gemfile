@@ -1,6 +1,6 @@
 # A sample Gemfile
 source "https://rubygems.org"
-ruby '2.2.1'
+ruby '2.2.2'
 
 gem "sinatra"
 gem "haml"
@@ -9,9 +9,11 @@ gem "mail"
 gem "puma"
 gem "rack-attack"
 gem "dalli"
+gem "RedCloth"
 
 group :development do
   gem "minitest"
+  gem "dotenv-rails"
   gem "rack-test"
   gem "webmock"
 end
