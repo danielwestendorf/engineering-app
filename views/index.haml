@@ -3,7 +3,7 @@
   %h1.centered Engineering Application
   %p.centered Please fill out the fields below to apply for our open engineering positions! But beware, something on this page might be <strong class="alert">broken</strong>. Perhaps you can <strong>fix it</strong>? Check out the <a href="https://github.com/danielwestendorf/engineering-app/tree/brightfunds" target="_blank">full source code</a> to see what's going on.
 
-%form{name: "application", method: "GET", action: "/apply", target: "_blank"}
+%form{name: "application", method: "POST", action: "/apply", target: "_blank"}
   .centered.window
     %p
       %label{for: "name"} Name
