@@ -5,6 +5,7 @@ class SubmissionWorker
   include Sidekiq::Worker
 
   def perform(params, remote_ip)
+
     if pass_recaptcha?(params["g-recaptcha-response"], remote_ip) == false
       puts "Recaptcha failed! #{params["g-recaptcha-response"]}, #{remote_ip}"
       return false
@@ -13,7 +14,7 @@ class SubmissionWorker
     body = app_body(params)
 
     Mail.deliver do
-      to params["email"]
+      to params[:email]
       from ENV["FROM_EMAIL"]
       subject "Engineering Application Recieved"
       html_part do
@@ -23,7 +24,7 @@ class SubmissionWorker
     end
 
     Mail.deliver do
-      from params["email"]
+      from params[:email]
       to ENV["TO_EMAIL"]
       subject "Engineering Application Recieved"
       html_part do
