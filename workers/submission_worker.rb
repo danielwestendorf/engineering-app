@@ -47,6 +47,16 @@ class SubmissionWorker
   end
 
   def app_body(params)
-    "<strong>Name:</strong> #{params["name"]}<br/><strong>Email:</strong> #{params["email"]}<br/><strong>Github Profile URL:</strong> #{params["github_profile_url"]}<br/><strong>Why work with us?: </strong> #{params["cover_letter"].gsub("\n", "<br />")}"
+    "<strong>Name:</strong> #{params["name"]}<br/>
+    <strong>Email:</strong> #{params["email"]}<br/>
+    <strong>Github Profile URL:</strong> #{params["github_profile_url"]}
+    <br/><strong>Why work with us?: </strong> #{format_cover(params["cover_letter"])}"
   end
+
+  private
+    def format_cover(text)
+      return text if text.nil?
+      text.gsub("\n", "<br />")
+    end
+
 end
