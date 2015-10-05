@@ -15,7 +15,7 @@ $ puma
 ```
 
 ### ENV variables:
-Make sure you set these variables in ```.env``` file.
+Make sure you set these env variables:
 
 `EMAIL_TO` => Who is receiving the emails?
 
@@ -23,6 +23,12 @@ Make sure you set these variables in ```.env``` file.
 
 `RECAPTCHA_KEY` => Google Recaptcha key
 
+From console/terminal, you can do it like so:
+
+```
+  export EMAIL_TO=test@example.com
+  export FROM_EMAIL=test@example.com
+```
 
 ### Deployment Keys
 SENDGRID_USERNAME
