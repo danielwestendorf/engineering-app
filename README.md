@@ -16,13 +16,21 @@ $ bundle install
 $ puma
 ```
 
-ENV variables:
+### ENV variables:
+Make sure you set these env variables:
+
 `EMAIL_TO` => Who is receiving the emails?
 
 `EMAIL_FROM` => Who should the FROM address be for notifications set to the applicant?
 
 `RECAPTCHA_KEY` => Google Recaptcha key
 
+From console/terminal, you can do it like so:
+
+```
+  export EMAIL_TO=test@example.com
+  export FROM_EMAIL=test@example.com
+```
 
 ### Deployment Keys
 SENDGRID_USERNAME
