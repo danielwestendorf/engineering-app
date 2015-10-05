@@ -12,7 +12,6 @@ gem "dalli"
 
 group :development do
   gem "minitest"
-  gem "dotenv-rails"
   gem "rack-test"
   gem "webmock"
 end
